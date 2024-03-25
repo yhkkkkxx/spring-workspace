@@ -7,19 +7,19 @@ import com.hana.app.exception.IdNotFoundException;
 import com.hana.app.exception.NotFoundException;
 import com.hana.app.frame.Dao;
 import com.hana.app.frame.Service;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 @org.springframework.stereotype.Service
 public class CustService implements Service<String, CustDto> {
-
+    @Autowired
     Dao<String, CustDto> dao;
 
     @Override
     public int add(CustDto custDto) throws DuplicatedIdException {
         System.out.println("Start TR ...");
         try {
-            dao.insert(custDto);
             dao.insert(custDto);
             System.out.println("COMMIT ...");
         } catch (DuplicatedIdException e) {
