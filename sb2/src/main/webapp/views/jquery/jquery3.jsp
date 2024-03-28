@@ -6,11 +6,26 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script>
+  let jquery3 = {
+    init: function() {
+      $('#btn_get').click(function() {
+        $.ajax({
+          url:'<c:url value="/getdata"/>',
+          success:function(data) {
+            alert(data);
+          }
+        })
+      });
+    }
+  }
+  $(function() {
+    jquery3.init();
+  });
+</script>
 <div class="container">
   <h2>JQUERY3 Page</h2>
-  <h5>Title description, Sep 2, 2017</h5>
-  <div class="fakeimg">Fake Image</div>
-  <p>Some text..</p>
-  <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  <button id="btn_get" type="button" class="btn btn-primary">GET</button>
+
 </div>
