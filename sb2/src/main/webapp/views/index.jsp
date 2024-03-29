@@ -18,10 +18,15 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="<c:url value="/js/0327.js"/>"></script>
+    <%--KAKAO Map API--%>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e874df38b9cea9b070cf9266aab4cc6e"></script>
     <style>
         .fakeimg {
             height: 200px;
             background: #aaa;
+        }
+        #con {
+            margin-bottom: 50px;
         }
     </style>
 </head>
@@ -86,6 +91,9 @@
                 <a class="nav-link" href="<c:url value="/geo/"/>">Geo</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="<c:url value="/chart/"/>">Chart</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#">Cust</a>
             </li>
             <li class="nav-item">
@@ -100,7 +108,7 @@
 <%--End Nav Bar--%>
 
 <%--Center Area--%>
-<div class="container-fluid" style="margin-top:30px">
+<div id="con" class="container-fluid" style="margin-top:30px">
     <div class="row">
         <div class="col-sm-2">
             <c:choose>
