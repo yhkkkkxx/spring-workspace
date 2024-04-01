@@ -6,7 +6,6 @@ import com.hana.app.data.dto.CustDto;
 import com.hana.app.data.dto.ShopDto;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

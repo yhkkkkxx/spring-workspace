@@ -3,45 +3,41 @@ package com.hana.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/chart")
-public class ChartController {
-    String dir = "chart/";
+@RequestMapping("/geo")
+public class GeoController {
+    String dir = "geo/";
     @RequestMapping("/")
     public String main(Model model) {
         model.addAttribute("left", dir+"left");
         model.addAttribute("center", dir+"center");
         return "index";
     }
-    @RequestMapping("/chart1")
+    @RequestMapping("/geo1")
     public String html1(Model model) {
         model.addAttribute("left", dir+"left");
-        model.addAttribute("center", dir+"chart1");
+        model.addAttribute("center", dir+"geo1");
         return "index";
     }
-    @RequestMapping("/chart2")
+    @RequestMapping("/geo2")
     public String htl2(Model model) {
         model.addAttribute("left", dir+"left");
-        model.addAttribute("center", dir+"chart2");
+        model.addAttribute("center", dir+"geo2");
         return "index";
     }
-    @RequestMapping("/chart3")
+    @RequestMapping("/geo3")
     public String html3(Model model) {
         model.addAttribute("left", dir+"left");
-        model.addAttribute("center", dir+"chart3");
+        model.addAttribute("center", dir+"geo3");
         return "index";
     }
-    @RequestMapping("/chart4")
-    public String html4(Model model) {
+    @RequestMapping("/shopdetail")
+    public String shopdetail(Model model, @RequestParam("shopid") int shopid) {
+        model.addAttribute("shopid", shopid);
         model.addAttribute("left", dir+"left");
-        model.addAttribute("center", dir+"chart4");
-        return "index";
-    }
-    @RequestMapping("/chart5")
-    public String html5(Model model) {
-        model.addAttribute("left", dir+"left");
-        model.addAttribute("center", dir+"chart5");
+        model.addAttribute("center", dir+"detail");
         return "index";
     }
 
