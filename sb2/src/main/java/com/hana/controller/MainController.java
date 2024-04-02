@@ -33,6 +33,7 @@ public class MainController {
         log.info(id+" "+pwd);
         httpSession.setMaxInactiveInterval(80000);
         if(id.equals("qqq") && pwd.equals("111")) {
+            log.info(id);
             httpSession.setAttribute("id", id);
         } else {
             model.addAttribute("center", "loginfail");
