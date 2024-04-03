@@ -73,6 +73,7 @@ let register = {
             let id = $('#id').val();
             let pwd = $('#pwd').val();
             let name = $('#name').val();
+            console.log(id, pwd, name)
             if(id == '' || id == null) {
                 alert('ID를 입력하세요');
                 $('#id').focus();
@@ -105,4 +106,69 @@ let register = {
     }
 
 
-}
+};
+
+let addcust = {
+    url:'',
+    init: function(url) {
+        this.url = url;
+        $('#add_form > button').click(function() {
+            let id = $('#id').val();
+            let name = $('#name').val();
+            let pwd = $('#pwd').val();
+            if(id == '' || id == null) {
+                alert('ID를 입력하세요');
+                $('#id').focus();
+                return;
+            }
+            else if(name == '' || name == null) {
+                alert('이름을 입력하세요');
+                $('#name').focus();
+                return;
+            }
+            else if(pwd == '' || pwd == null) {
+                alert('PWD를 입력하세요');
+                $('#pwd').focus();
+                return;
+            }
+            addcust.send();
+        });
+    },
+    send: function() {
+        $('#add_form').attr({
+            'method':'post',
+            'action': this.url
+        });
+        $('#add_form').submit();
+    }
+
+};
+
+let addaddr = {
+    url:'',
+    init: function(url) {
+        this.url = url;
+        $('#addaddr_form > button').click(function() {
+            let alias = $('#addrName').val();
+            let address = $('#addrDetail').val();
+            if(alias == '' || alias == null) {
+                alert('배송지명을 입력하세요');
+                $('#alias').focus();
+                return;
+            }
+            else if(address == '' || address == null) {
+                alert('배송지를 입력하세요');
+                $('#address').focus();
+                return;
+            }
+            addaddr.send();
+        });
+    },
+    send: function() {
+        $('#addaddr_form').attr({
+            'method':'post',
+            'action': this.url
+        });
+        $('#addaddr_form').submit();
+    }
+};

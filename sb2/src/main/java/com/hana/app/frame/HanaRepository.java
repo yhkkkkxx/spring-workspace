@@ -8,7 +8,7 @@ public interface HanaRepository<K, V> {
     int delete(K k) throws Exception;
     int update(V v) throws Exception;
     V selectOne(K k) throws Exception;
-
+    List<V> selectAddr(String s) throws Exception;
 
     List<V> select() throws Exception;
 

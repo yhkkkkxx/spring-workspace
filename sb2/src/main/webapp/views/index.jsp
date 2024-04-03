@@ -62,7 +62,7 @@
     <c:otherwise>
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" href="#">${id}</a>
+                <a class="nav-link" href="<c:url value="/mypage/"/>">${id}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<c:url value="/logout"/>">LOGOUT</a>
@@ -100,12 +100,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="<c:url value="/chart/"/>">Chart</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Cust</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Item</a>
-            </li>
+            <c:if test="${id!=null}">
+                <li class="nav-item">
+                    <a class="nav-link" href="<c:url value="/cust/"/>">Cust</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Item</a>
+                </li>
+            </c:if>
             <li class="nav-item">
                 <a class="nav-link" href="#">ABOUT US</a>
             </li>

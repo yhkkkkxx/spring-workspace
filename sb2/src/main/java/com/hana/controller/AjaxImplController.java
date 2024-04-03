@@ -4,6 +4,8 @@ import com.hana.app.data.dto.Chart2Dto;
 import com.hana.app.data.dto.Chart3Dto;
 import com.hana.app.data.dto.CustDto;
 import com.hana.app.data.dto.ShopDto;
+import com.hana.app.service.CustService;
+import lombok.RequiredArgsConstructor;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.stereotype.Controller;
@@ -15,7 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
 
 @RestController
+@RequiredArgsConstructor
 public class AjaxImplController {
+    final CustService custService;
     @RequestMapping("/getservertime")
     public Object getservertime() {
         Date date = new Date();
@@ -137,4 +141,5 @@ public class AjaxImplController {
         jo.put("title",gender);
         return jo;
     }
+
 }

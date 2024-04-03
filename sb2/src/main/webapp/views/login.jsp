@@ -20,12 +20,12 @@
     <form id="login_form">
       <div class="form-group">
         <label for="id">ID:</label>
-        <input type="text" class="form-control" id="id" placeholder="Enter id" name="id">
+        <input value="id01" type="text" class="form-control" id="id" placeholder="Enter id" name="id">
         <span id="id_span"></span>
       </div>
       <div class="form-group">
         <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+        <input value="pwd01" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
         <span id="pwd_span"></span>
       </div>
       <div class="form-group form-check">

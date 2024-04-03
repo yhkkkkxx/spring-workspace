@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -37,5 +38,9 @@ public class AddrService implements HanaService<Integer, AddrDto> {
     @Override
     public List<AddrDto> get() throws Exception {
         return addrRepository.select();
+    }
+
+    public List<AddrDto> getAddress(String custid) throws Exception {
+        return addrRepository.selectAddr(custid);
     }
 }

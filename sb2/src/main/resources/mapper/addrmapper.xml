@@ -19,5 +19,8 @@
     <delete id="delete" parameterType="Integer">
         DELETE FROM db_addr WHERE addr_id=#{id}
     </delete>
+    <select id="selectAddr" parameterType="String">
+        SELECT * FROM db_addr WHERE cust_id=#{custId}
+    </select>
 
 </mapper>
