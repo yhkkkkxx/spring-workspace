@@ -35,10 +35,10 @@ dependencies {
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
     runtimeOnly 'com.mysql:mysql-connector-j'
 
-    // Mysql handler
+    // Mysql handler - LocalDate
     implementation 'org.mybatis:mybatis-typehandlers-jsr310:1.0.2'
 
-    // logback
+    // logback - MyBatis SQL Log
     implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
 
     //tomcat & JSP
