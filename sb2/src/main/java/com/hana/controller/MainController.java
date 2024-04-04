@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.Random;
 
 @Controller
 @Slf4j
@@ -23,6 +24,9 @@ public class MainController {
 
     @RequestMapping("/")
     public String main() {
+        Random r = new Random();
+        int num = r.nextInt(100)+1;
+        log.info(num+"");
         return "index";
     }
     @RequestMapping("/login")

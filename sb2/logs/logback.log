@@ -207,3 +207,72 @@
 [2024-04-04 00:03:15:39949][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {addrlist=[AddrDto(addrId=2, addrName=우리집, addrDetail=사랑시 고백구 행복동, custId=id01), AddrDto(addrId=3, addrName=알파코캠, addrDetail=증오시 고통구 절망동, custId=id01), AddrDto(addrId=17, addrName=알파카캠퍼스, addrDetail=성수동, custId=id01), AddrDto(addrId=18, addrName=하나은행, addrDetail=서울시 하나구 붙여동, custId=id01)], left=mypage/left, center=mypage/address}
 [2024-04-04 00:03:15:39949][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
 [2024-04-04 00:03:15:39951][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:04:44:1345][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 51 mappings in 'requestMappingHandlerMapping'
+[2024-04-04 09:04:44:1388][main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /imgs/**, /logs/**] in 'resourceHandlerMapping'
+[2024-04-04 09:04:44:1403][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2024-04-04 09:04:44:1422][main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[2024-04-04 09:04:46:2974][http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-04-04 09:04:46:2974][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+[2024-04-04 09:04:46:2974][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+[2024-04-04 09:04:46:2974][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+[2024-04-04 09:04:46:2975][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5dc78549
+[2024-04-04 09:04:46:2975][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@13a76777
+[2024-04-04 09:04:46:2975][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[2024-04-04 09:04:46:2975][http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2024-04-04 09:04:46:2979][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/logout", parameters={}
+[2024-04-04 09:04:46:2984][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#logout(Model, HttpSession)
+[2024-04-04 09:04:46:3001][http-nio-80-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:04:46:3001][http-nio-80-exec-1] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {}
+[2024-04-04 09:04:46:3003][http-nio-80-exec-1] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:04:47:3553][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:04:47:3572][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/0327.js", parameters={}
+[2024-04-04 09:04:47:3575][http-nio-80-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-04 09:04:47:3577][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+[2024-04-04 09:04:47:4453][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/login", parameters={}
+[2024-04-04 09:04:47:4454][http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#login(Model)
+[2024-04-04 09:04:47:4456][http-nio-80-exec-3] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:04:47:4456][http-nio-80-exec-3] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {center=login}
+[2024-04-04 09:04:47:4456][http-nio-80-exec-3] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:04:48:4520][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:04:51:7963][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - POST "/loginimpl", parameters={masked}
+[2024-04-04 09:04:51:7963][http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#loginimpl(Model, String, String, HttpSession)
+[2024-04-04 09:04:51:8245][http-nio-80-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:04:51:8245][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {}
+[2024-04-04 09:04:51:8245][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:04:51:8246][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:04:52:8995][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/mypage/", parameters={}
+[2024-04-04 09:04:52:8996][http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MyPageController#main(Model, HttpSession)
+[2024-04-04 09:04:52:9006][http-nio-80-exec-5] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:04:52:9007][http-nio-80-exec-5] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {myinfo=CustDto(id=id01, pwd=pwd01, name=james), left=mypage/left, center=mypage/center, org.springframework.validation.BindingResult.myinfo=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+[2024-04-04 09:04:52:9007][http-nio-80-exec-5] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:04:52:9107][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:04:55:12064][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/mypage/address", parameters={}
+[2024-04-04 09:04:55:12065][http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MyPageController#address(Model, HttpSession)
+[2024-04-04 09:04:55:12080][http-nio-80-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:04:55:12085][http-nio-80-exec-6] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {addrlist=[AddrDto(addrId=2, addrName=우리집, addrDetail=사랑시 고백구 행복동, custId=id01), AddrDto(addrId=3, addrName=알파코캠, addrDetail=증오시 고통구 절망동, custId=id01), AddrDto(addrId=17, addrName=알파카캠퍼스, addrDetail=성수동, custId=id01), AddrDto(addrId=18, addrName=하나은행, addrDetail=서울시 하나구 붙여동, custId=id01)], left=mypage/left, center=mypage/address}
+[2024-04-04 09:04:55:12086][http-nio-80-exec-6] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:04:55:12160][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:04:56:13369][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/mypage/addaddr", parameters={}
+[2024-04-04 09:04:56:13370][http-nio-80-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MyPageController#addaddr(Model)
+[2024-04-04 09:04:56:13371][http-nio-80-exec-7] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:04:56:13371][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=mypage/left, center=mypage/addaddr}
+[2024-04-04 09:04:56:13372][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:04:56:13434][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:04:58:14950][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/mypage/address", parameters={}
+[2024-04-04 09:04:58:14951][http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MyPageController#address(Model, HttpSession)
+[2024-04-04 09:04:58:14960][http-nio-80-exec-8] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:04:58:14961][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {addrlist=[AddrDto(addrId=2, addrName=우리집, addrDetail=사랑시 고백구 행복동, custId=id01), AddrDto(addrId=3, addrName=알파코캠, addrDetail=증오시 고통구 절망동, custId=id01), AddrDto(addrId=17, addrName=알파카캠퍼스, addrDetail=성수동, custId=id01), AddrDto(addrId=18, addrName=하나은행, addrDetail=서울시 하나구 붙여동, custId=id01)], left=mypage/left, center=mypage/address}
+[2024-04-04 09:04:58:14961][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:04:58:14963][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:10:21:337686][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/mypage/addaddr", parameters={}
+[2024-04-04 09:10:21:337688][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MyPageController#addaddr(Model)
+[2024-04-04 09:10:21:337698][http-nio-80-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:10:21:337698][http-nio-80-exec-1] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=mypage/left, center=mypage/addaddr}
+[2024-04-04 09:10:21:337698][http-nio-80-exec-1] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:10:21:337703][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:10:22:338672][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/mypage/", parameters={}
+[2024-04-04 09:10:22:338672][http-nio-80-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MyPageController#main(Model, HttpSession)
+[2024-04-04 09:10:22:338678][http-nio-80-exec-2] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:10:22:338678][http-nio-80-exec-2] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {myinfo=CustDto(id=id01, pwd=pwd01, name=james), left=mypage/left, center=mypage/center, org.springframework.validation.BindingResult.myinfo=org.springframework.validation.BeanPropertyBindingResult: 0 errors}
+[2024-04-04 09:10:22:338678][http-nio-80-exec-2] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:10:22:338679][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
