@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: hayoung
-  Date: 2024/03/28
-  Time: 11:03 AM
+  User: User
+  Date: 2024-03-28
+  Time: 오전 11:03
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -41,7 +41,7 @@
                     <tbody>
                     <c:forEach var="c" items="${custs}">
                         <tr>
-                            <td>${c.id}</td>
+                            <td><a href="<c:url value="/cust/detail"/>?id=${c.id}">${c.id}</a></td>
                             <td>${c.pwd}</td>
                             <td>${c.name}</td>
                         </tr>
@@ -53,3 +53,4 @@
     </div>
 
 </div>
+
