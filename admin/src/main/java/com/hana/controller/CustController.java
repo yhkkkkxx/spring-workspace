@@ -32,21 +32,19 @@ public class CustController {
         return "index";
     }
     @RequestMapping("/addimpl")
-    public String addimpl(Model model, CustDto custDto) {
+    public String addimpl(Model model, CustDto custDto) throws Exception {
         try {
             custService.add(custDto);
-            //model.addAttribute("center", dir+"get");
-            get(model);
-            //return "redirect:/cust/detail?id="+custDto.getId();
+            return "redirect:/cust/detail?id="+custDto.getId();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new Exception("ER0001");
         }
 
-        return "index";
+        //return "index";
     }
 
     @RequestMapping("/get")
-    public String get(Model model) {
+    public String get(Model model) throws Exception {
         List<CustDto> list = null;
         try {
             list = custService.get();
@@ -54,7 +52,7 @@ public class CustController {
             model.addAttribute("center", dir+"get");
 
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new Exception("ER0001");
         }
         return "index";
     }
@@ -75,30 +73,23 @@ public class CustController {
 
     @RequestMapping("/update")
     public String update(Model model, CustDto custDto) {
-        System.out.println(custDto);
-        CustDto c = CustDto.builder().id(custDto.getId()).pwd(custDto.getPwd()).name(custDto.getName()).build();
-        System.out.println(c);
         try {
             custService.modify(custDto);
-            get(model);
+            return "redirect:/cust/get";
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
-        return "index";
     }
 
     @RequestMapping("/delete")
-    public String delete(Model model, CustDto custDto) {
+    public String delete(Model model, @RequestParam("id") String id) throws Exception {
+        System.out.println("delete "+ id);
         try {
-            custService.del(custDto.getId());
-            get(model);
-            //return "redirect:/cust/detiail?id="+custDto.getId()
+            custService.del(id);
+            return "redirect:/cust/get";
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new Exception("ER0001");
         }
-
-        return "index";
     }
 
 }

@@ -7,28 +7,25 @@
   let detail = {
     init:function() {
       $('#upd_btn').click(() => {
-        //let c = confirm('수정하시겠습니까?');
-        <%--if (c == true) {--%>
-        <%--  detail.send('<c:url value="/cust/update"/>');--%>
-        <%--  //   let id = $('#id').val();--%>
-        <%--  //   location.href = url;--%>
-        <%--}--%>
+        let c = confirm('수정하시겠습니까?');
+        if (c == true) {
+          this.send();
+        }
         detail.send('<c:url value="/cust/update"/>');
       });
       $('#del_btn').click(() => {
         let c = confirm('삭제하시겠습니까?');
         if (c == true) {
-          detail.send('<c:url value="/cust/delete"/>');
-          //   let id = $('#id').val();
-          //   location.href = url;
+             let id = $('#id').val();
+            location.href = "<c:url value="/cust/delete"/>?id="+id;
         }
       });
 
     },
-    send:function(url) {
+    send:function() {
       $('#detail_form').attr({
         'method':'post',
-        'action':url
+        'action':'<c:url value="/cust/update"/>'
       });
       $('#detail_form').submit();
     }

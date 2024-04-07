@@ -7,7 +7,10 @@
   let custadd = {
     init:function() {
       $('#add_btn').click(() => {
-        custadd.send('<c:url value="/cust/addimpl"/>');
+        let c = confirm('입력하시겠습니까?');
+        if(c == true){
+          custadd.send('<c:url value="/cust/addimpl"/>');
+        }
       });
     },
     send:function(url) {

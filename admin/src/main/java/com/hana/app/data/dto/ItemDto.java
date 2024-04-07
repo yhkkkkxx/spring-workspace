@@ -1,6 +1,7 @@
 package com.hana.app.data.dto;
 
 import lombok.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
 
@@ -16,4 +17,5 @@ public class ItemDto {
     private String imgName;
     private LocalDate regDate;
     private LocalDate updateDate;
+    private MultipartFile image;
 }

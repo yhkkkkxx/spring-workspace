@@ -127,7 +127,7 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Item Management:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Add</a>
+                        <a class="collapse-item" href="<c:url value="/item/add"/>">Add</a>
                         <a class="collapse-item" href="<c:url value="/item/get"/>">Get</a>
                     </div>
                 </div>
@@ -330,7 +330,7 @@
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <span class="mr-2 d-none d-lg-inline text-gray-600 small">${sessionScope.admin.id}</span>
                                     <img class="img-profile rounded-circle"
-                                         src="img/undraw_profile.svg">
+                                         src="<c:url value="/img/undraw_profile.svg"/>">
                                 </a>
                             </li>
                             <li class="nav-item dropdown no-arrow">

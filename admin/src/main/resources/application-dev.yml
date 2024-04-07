@@ -31,7 +31,8 @@ logging:
 
 app:
   dir:
-    imgdir: file:/Users/hayoung/Documents/project/imgs/
+    imgdir: file:/Users/hayoung/Documents/project/imgs/ # 화면 출력용
+    uploadimgdir: /Users/hayoung/Documents/project/imgs/ # 파일 받아오기용
     logdir: file:/Users/hayoung/Documents/project/logs/
   url:
     chart-url: http://127.0.0.1:81
