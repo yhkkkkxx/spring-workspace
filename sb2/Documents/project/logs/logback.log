@@ -1,0 +1,241 @@
+[2024-04-04 09:22:17:1531][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 51 mappings in 'requestMappingHandlerMapping'
+[2024-04-04 09:22:17:1572][main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /imgs/**, /logs/**] in 'resourceHandlerMapping'
+[2024-04-04 09:22:17:1587][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2024-04-04 09:22:17:1604][main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[2024-04-04 09:22:43:27032][http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-04-04 09:22:43:27032][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+[2024-04-04 09:22:43:27032][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+[2024-04-04 09:22:43:27032][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+[2024-04-04 09:22:43:27034][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4aa7b53e
+[2024-04-04 09:22:43:27034][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@42e7348a
+[2024-04-04 09:22:43:27034][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[2024-04-04 09:22:43:27034][http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+[2024-04-04 09:22:43:27038][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/img/a.jpg", parameters={}
+[2024-04-04 09:22:43:27043][http-nio-80-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-04 09:22:43:27053][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:23:08:52105][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/mypage/addaddr", parameters={}
+[2024-04-04 09:23:08:52107][http-nio-80-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MyPageController#addaddr(Model)
+[2024-04-04 09:23:08:52133][http-nio-80-exec-2] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:23:08:52134][http-nio-80-exec-2] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=mypage/left, center=mypage/addaddr}
+[2024-04-04 09:23:08:52138][http-nio-80-exec-2] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:23:08:52714][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:23:37:80896][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/cust/", parameters={}
+[2024-04-04 09:23:37:80899][http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.CustController#main(Model)
+[2024-04-04 09:23:37:80905][http-nio-80-exec-3] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:23:37:80905][http-nio-80-exec-3] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=cust/left, center=cust/center}
+[2024-04-04 09:23:37:80906][http-nio-80-exec-3] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:23:37:81013][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:23:37:81697][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/chart/", parameters={}
+[2024-04-04 09:23:37:81698][http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.ChartController#main(Model)
+[2024-04-04 09:23:37:81700][http-nio-80-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:23:37:81700][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=chart/left, center=chart/center}
+[2024-04-04 09:23:37:81700][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:23:37:81789][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:23:39:83708][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/login", parameters={}
+[2024-04-04 09:23:39:83709][http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#login(Model)
+[2024-04-04 09:23:39:83710][http-nio-80-exec-5] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:23:39:83710][http-nio-80-exec-5] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {center=login}
+[2024-04-04 09:23:39:83710][http-nio-80-exec-5] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:23:39:83793][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:23:40:84772][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - POST "/loginimpl", parameters={masked}
+[2024-04-04 09:23:40:84773][http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#loginimpl(Model, String, String, HttpSession)
+[2024-04-04 09:23:41:85039][http-nio-80-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:23:41:85040][http-nio-80-exec-6] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {}
+[2024-04-04 09:23:41:85040][http-nio-80-exec-6] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:23:41:85067][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:12:116628][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/", parameters={}
+[2024-04-04 09:24:12:116628][http-nio-80-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.GeoController#main(Model)
+[2024-04-04 09:24:12:116630][http-nio-80-exec-7] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:24:12:116631][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=geo/left, center=geo/center}
+[2024-04-04 09:24:12:116631][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:24:12:116719][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:13:117576][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/geo1", parameters={}
+[2024-04-04 09:24:13:117577][http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.GeoController#html1(Model)
+[2024-04-04 09:24:13:117578][http-nio-80-exec-8] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:24:13:117580][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=geo/left, center=geo/geo1}
+[2024-04-04 09:24:13:117581][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:24:13:117640][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:20:124556][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/img/hana.png", parameters={}
+[2024-04-04 09:24:20:124558][http-nio-80-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-04 09:24:20:124561][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:22:126451][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/geo2", parameters={}
+[2024-04-04 09:24:22:126451][http-nio-80-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.GeoController#htl2(Model)
+[2024-04-04 09:24:22:126453][http-nio-80-exec-10] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:24:22:126453][http-nio-80-exec-10] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=geo/left, center=geo/geo2}
+[2024-04-04 09:24:22:126453][http-nio-80-exec-10] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:24:22:126525][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:22:126580][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=37.6497442&lng=126.8509859", parameters={masked}
+[2024-04-04 09:24:22:126580][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:22:126588][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:22:126592][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=37.696461130508716, lng=126.84933043687887), ShopDto(id=1 (truncated)...]
+[2024-04-04 09:24:22:126616][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:22:126621][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/img/c.jpg", parameters={}
+[2024-04-04 09:24:22:126621][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/img/b.jpg", parameters={}
+[2024-04-04 09:24:22:126621][http-nio-80-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-04 09:24:22:126621][http-nio-80-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-04 09:24:22:126622][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:22:126622][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:27:131719][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/geo3", parameters={}
+[2024-04-04 09:24:27:131720][http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.GeoController#html3(Model)
+[2024-04-04 09:24:27:131722][http-nio-80-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:24:27:131722][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=geo/left, center=geo/geo3}
+[2024-04-04 09:24:27:131722][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:24:27:131795][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:27:131850][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getdata", parameters={}
+[2024-04-04 09:24:27:131851][http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetdata()
+[2024-04-04 09:24:27:131851][http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:27:131851][http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=37.5449352, lng=127.0966045), ShopDto(id=101, title=파스타,  (truncated)...]
+[2024-04-04 09:24:27:131852][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:27:131853][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/img/undefined", parameters={}
+[2024-04-04 09:24:27:131853][http-nio-80-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-04 09:24:27:131855][http-nio-80-exec-6] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+[2024-04-04 09:24:27:131858][http-nio-80-exec-6] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource img/undefined.]
+[2024-04-04 09:24:27:131858][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+[2024-04-04 09:24:27:131859][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+[2024-04-04 09:24:27:131860][http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-04-04 09:24:27:131864][http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+[2024-04-04 09:24:27:131866][http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Apr 04 09:24:27 KST 2024, status=404, error=Not Found, path=/img/undefined}]
+[2024-04-04 09:24:27:131871][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+[2024-04-04 09:24:34:138221][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/geo3", parameters={}
+[2024-04-04 09:24:34:138221][http-nio-80-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.GeoController#html3(Model)
+[2024-04-04 09:24:34:138222][http-nio-80-exec-7] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:24:34:138222][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=geo/left, center=geo/geo3}
+[2024-04-04 09:24:34:138223][http-nio-80-exec-7] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:24:34:138224][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:34:138538][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/img/undefined", parameters={}
+[2024-04-04 09:24:34:138538][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getdata", parameters={}
+[2024-04-04 09:24:34:138538][http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetdata()
+[2024-04-04 09:24:34:138538][http-nio-80-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-04 09:24:34:138538][http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:34:138539][http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=37.5449352, lng=127.0966045), ShopDto(id=101, title=파스타,  (truncated)...]
+[2024-04-04 09:24:34:138540][http-nio-80-exec-9] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+[2024-04-04 09:24:34:138540][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:34:138540][http-nio-80-exec-9] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource img/undefined.]
+[2024-04-04 09:24:34:138540][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+[2024-04-04 09:24:34:138541][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+[2024-04-04 09:24:34:138542][http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2024-04-04 09:24:34:138542][http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+[2024-04-04 09:24:34:138543][http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Apr 04 09:24:34 KST 2024, status=404, error=Not Found, path=/img/undefined}]
+[2024-04-04 09:24:34:138544][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+[2024-04-04 09:24:37:141861][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/geo2", parameters={}
+[2024-04-04 09:24:37:141861][http-nio-80-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.GeoController#htl2(Model)
+[2024-04-04 09:24:37:141862][http-nio-80-exec-10] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:24:37:141862][http-nio-80-exec-10] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {left=geo/left, center=geo/geo2}
+[2024-04-04 09:24:37:141862][http-nio-80-exec-10] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:24:37:141863][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:38:141933][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=37.6497442&lng=126.8509859", parameters={masked}
+[2024-04-04 09:24:38:141933][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:38:141934][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:38:141934][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=37.66540889616306, lng=126.856631578757), ShopDto(id=101, (truncated)...]
+[2024-04-04 09:24:38:141935][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:39:143835][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=35.1290483&lng=129.0446982", parameters={masked}
+[2024-04-04 09:24:39:143836][http-nio-80-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:39:143837][http-nio-80-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:39:143838][http-nio-80-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=35.11925994572856, lng=129.01203939772526), ShopDto(id=10 (truncated)...]
+[2024-04-04 09:24:39:143839][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:40:144790][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=33.3846216&lng=126.5534925", parameters={masked}
+[2024-04-04 09:24:40:144790][http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:40:144792][http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:40:144792][http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=33.39235331233421, lng=126.51469591260589), ShopDto(id=10 (truncated)...]
+[2024-04-04 09:24:40:144794][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:41:145608][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=37.5447611&lng=127.0564625", parameters={masked}
+[2024-04-04 09:24:41:145608][http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:41:145609][http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:41:145610][http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=37.573471471685885, lng=127.06764841609089), ShopDto(id=1 (truncated)...]
+[2024-04-04 09:24:41:145611][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:42:146840][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=35.1290483&lng=129.0446982", parameters={masked}
+[2024-04-04 09:24:42:146841][http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:42:146841][http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:42:146842][http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=35.130864377253054, lng=128.99877907538632), ShopDto(id=1 (truncated)...]
+[2024-04-04 09:24:42:146842][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:43:147434][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=33.3846216&lng=126.5534925", parameters={masked}
+[2024-04-04 09:24:43:147434][http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:43:147435][http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:43:147436][http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=33.39899758885609, lng=126.59621529463236), ShopDto(id=10 (truncated)...]
+[2024-04-04 09:24:43:147437][http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:44:147924][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=37.5447611&lng=127.0564625", parameters={masked}
+[2024-04-04 09:24:44:147925][http-nio-80-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:44:147926][http-nio-80-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:44:147927][http-nio-80-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=37.493677067893024, lng=127.00584928123655), ShopDto(id=1 (truncated)...]
+[2024-04-04 09:24:44:147928][http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:44:148357][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=35.1290483&lng=129.0446982", parameters={masked}
+[2024-04-04 09:24:44:148357][http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:44:148358][http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:44:148359][http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=35.16807998367313, lng=129.008827279783), ShopDto(id=101, (truncated)...]
+[2024-04-04 09:24:44:148360][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:44:148764][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=35.1290483&lng=129.0446982", parameters={masked}
+[2024-04-04 09:24:44:148764][http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:44:148766][http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:44:148767][http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=35.12320575594533, lng=128.998509097627), ShopDto(id=101, (truncated)...]
+[2024-04-04 09:24:44:148768][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:45:149107][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=35.1290483&lng=129.0446982", parameters={masked}
+[2024-04-04 09:24:45:149107][http-nio-80-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:45:149108][http-nio-80-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:45:149108][http-nio-80-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=35.09170250800389, lng=129.01916541621435), ShopDto(id=10 (truncated)...]
+[2024-04-04 09:24:45:149109][http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:45:149317][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=35.1290483&lng=129.0446982", parameters={masked}
+[2024-04-04 09:24:45:149318][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:45:149319][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:45:149319][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=35.120316612254406, lng=128.98461041574615), ShopDto(id=1 (truncated)...]
+[2024-04-04 09:24:45:149320][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:45:149516][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=35.1290483&lng=129.0446982", parameters={masked}
+[2024-04-04 09:24:45:149517][http-nio-80-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:45:149518][http-nio-80-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:45:149519][http-nio-80-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=35.089797681608786, lng=129.08607107636948), ShopDto(id=1 (truncated)...]
+[2024-04-04 09:24:45:149520][http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:45:149675][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/geo/getshopdata?lat=35.1290483&lng=129.0446982", parameters={masked}
+[2024-04-04 09:24:45:149676][http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.AjaxImplController#geogetshopdata(double, double)
+[2024-04-04 09:24:45:149677][http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+[2024-04-04 09:24:45:149677][http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[ShopDto(id=100, title=순대국, img=a.jpg, lat=35.13589658069909, lng=129.08526045198093), ShopDto(id=10 (truncated)...]
+[2024-04-04 09:24:45:149678][http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:24:54:158271][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+[2024-04-04 09:24:54:158271][http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#main()
+[2024-04-04 09:24:54:158272][http-nio-80-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:24:54:158272][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {}
+[2024-04-04 09:24:54:158273][http-nio-80-exec-4] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:24:54:158274][http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:25:01:165307][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webapp/views/index.js", parameters={}
+[2024-04-04 09:25:01:165308][http-nio-80-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+[2024-04-04 09:25:01:165312][http-nio-80-exec-5] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+[2024-04-04 09:25:01:165313][http-nio-80-exec-5] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource webapp/views/index.js.]
+[2024-04-04 09:25:01:165313][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+[2024-04-04 09:25:01:165313][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+[2024-04-04 09:25:01:165315][http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+[2024-04-04 09:25:01:165330][http-nio-80-exec-5] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+[2024-04-04 09:25:01:165333][http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+[2024-04-04 09:29:00:404031][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+[2024-04-04 09:29:00:404033][http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.hana.controller.MainController#main()
+[2024-04-04 09:29:00:404035][http-nio-80-exec-8] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+[2024-04-04 09:29:00:404036][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - View name 'index', model {}
+[2024-04-04 09:29:00:404036][http-nio-80-exec-8] DEBUG o.s.web.servlet.view.JstlView - Forwarding to [/views/index.jsp]
+[2024-04-04 09:29:00:404039][http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+[2024-04-04 09:29:06:410082][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/imgs/a.jpg", parameters={}
+[2024-04-04 09:29:06:410085][http-nio-80-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [ServletContext [/Documents/project/imgs/]]
+[2024-04-04 09:29:06:410087][http-nio-80-exec-9] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+[2024-04-04 09:29:06:410087][http-nio-80-exec-9] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource a.jpg.]
+[2024-04-04 09:29:06:410087][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+[2024-04-04 09:29:06:410088][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+[2024-04-04 09:29:06:410089][http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+[2024-04-04 09:29:06:410092][http-nio-80-exec-9] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+[2024-04-04 09:29:06:410093][http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+[2024-04-04 09:31:30:1324][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 51 mappings in 'requestMappingHandlerMapping'
+[2024-04-04 09:31:30:1364][main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /imgs/**, /logs/**] in 'resourceHandlerMapping'
+[2024-04-04 09:31:30:1377][main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2024-04-04 09:31:30:1394][main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[2024-04-04 09:31:34:5330][http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-04-04 09:31:34:5330][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+[2024-04-04 09:31:34:5330][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+[2024-04-04 09:31:34:5330][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+[2024-04-04 09:31:34:5331][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@44634bdd
+[2024-04-04 09:31:34:5331][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@53745da2
+[2024-04-04 09:31:34:5331][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[2024-04-04 09:31:34:5331][http-nio-80-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2024-04-04 09:31:34:5336][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/imgs/a.jpg", parameters={}
+[2024-04-04 09:31:34:5340][http-nio-80-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [ServletContext [/Documents/project/imgs/]]
+[2024-04-04 09:31:34:5344][http-nio-80-exec-1] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+[2024-04-04 09:31:34:5348][http-nio-80-exec-1] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource a.jpg.]
+[2024-04-04 09:31:34:5348][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+[2024-04-04 09:31:34:5351][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+[2024-04-04 09:31:34:5352][http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+[2024-04-04 09:31:34:5365][http-nio-80-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+[2024-04-04 09:31:34:5368][http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
