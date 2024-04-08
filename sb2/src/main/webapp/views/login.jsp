@@ -12,33 +12,23 @@
     login.init('<c:url value="/loginimpl"/>');
   });
 </script>
-<html>
-<head>
+</script>
+<div class="container">
+  <h2>Login Page</h2>
+  <form id="login_form">
+    <div class="form-group">
+      <label for="id">ID:</label>
+      <input type="text" value="id01" class="form-control" id="id" placeholder="Enter id" name="id">
 
-  <div class="container">
-    <h2>Login Page</h2>
-    <form id="login_form">
-      <div class="form-group">
-        <label for="id">ID:</label>
-        <input value="id01" type="text" class="form-control" id="id" placeholder="Enter id" name="id">
-        <span id="id_span"></span>
-      </div>
-      <div class="form-group">
-        <label for="pwd">Password:</label>
-        <input value="pwd01" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-        <span id="pwd_span"></span>
-      </div>
-      <div class="form-group form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" name="remember"> Remember me
-        </label>
-      </div>
-      <button type="button" class="btn btn-primary">Login</button>
-    </form>
-  </div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" value="pwd01" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
 
-</head>
-<body>
-
-</body>
-</html>
+    </div>
+    <div class="form-group">
+      <p>${msg}</p>
+    </div>
+    <button type="button" class="btn btn-primary">LOGIN</button>
+  </form>
+</div>

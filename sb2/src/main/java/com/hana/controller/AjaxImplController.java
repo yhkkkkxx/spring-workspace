@@ -6,6 +6,7 @@ import com.hana.app.data.dto.CustDto;
 import com.hana.app.data.dto.ShopDto;
 import com.hana.app.service.CustService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.stereotype.Controller;
@@ -17,12 +18,17 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
 
 @RestController
-@RequiredArgsConstructor
+@Slf4j
 public class AjaxImplController {
-    final CustService custService;
+    private String aa;
+    public AjaxImplController() {
+        log.info("start-----------");
+        aa = "aaaa";
+    }
     @RequestMapping("/getservertime")
     public Object getservertime() {
         Date date = new Date();
+        log.info(this.aa+"----------");
         return date;
     }
     @RequestMapping("/getdata")

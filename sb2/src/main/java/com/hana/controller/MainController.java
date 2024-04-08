@@ -1,8 +1,10 @@
 package com.hana.controller;
 
 import com.hana.app.data.dto.AddrDto;
+import com.hana.app.data.dto.BoardDto;
 import com.hana.app.data.dto.CustDto;
 import com.hana.app.service.AddrService;
+import com.hana.app.service.BoardService;
 import com.hana.app.service.CustService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -12,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 import java.util.Random;
@@ -21,12 +24,19 @@ import java.util.Random;
 @RequiredArgsConstructor
 public class MainController {
     final CustService custService;
+    final BoardService boardService;
 
     @RequestMapping("/")
-    public String main() {
+    public String main(Model model) {
         Random r = new Random();
         int num = r.nextInt(1000)+1;
-        log.info(num+"");
+        List<BoardDto> list = null;
+        try{
+            list = boardService.getRank();
+        }catch (Exception e){
+            model.addAttribute("ranks",null);
+        }
+        model.addAttribute("ranks",list);
         return "index";
     }
     @RequestMapping("/login")
@@ -56,12 +66,10 @@ public class MainController {
                 throw new Exception();
             }
             httpSession.setAttribute("id", id);
-            log.info("------------------------");
-            log.info(httpSession.getAttribute("id").toString());
-            log.info("------------------------");
+            return "redirect:/";
         } catch (Exception e) {
-            model.addAttribute("center", "loginfail");
-            //throw new RuntimeException(e);
+            model.addAttribute("msg","ID또는 PWD가 틀렸습니다.");
+            model.addAttribute("center","login");
         }
         return "index";
     }
@@ -82,5 +90,15 @@ public class MainController {
         return "index";
     }
 
+    @ResponseBody
+    @RequestMapping("/registercheckid")
+    public Object registercheckid(@RequestParam("id") String id) throws Exception {
+        String result = "0";
+        CustDto custDto = custService.get(id);
+        if(custDto == null){
+            result = "1";
+        }
+        return result;
+    }
 
 }

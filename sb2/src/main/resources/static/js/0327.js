@@ -64,50 +64,6 @@ let html2={
 };
 
 
-
-let register = {
-    url:'',
-    init: function(url) {
-        this.url = url;
-        $('#register_form > button').click(function() {
-            let id = $('#id').val();
-            let pwd = $('#pwd').val();
-            let name = $('#name').val();
-            console.log(id, pwd, name)
-            if(id == '' || id == null) {
-                alert('ID를 입력하세요');
-                $('#id').focus();
-                return;
-            }
-            else if(name == '' || name == null) {
-                alert('이름을 입력하세요');
-                $('#name').focus();
-                return;
-            }
-            else if(pwd == '' || pwd == null) {
-                alert('PWD를 입력하세요');
-                $('#pwd').focus();
-                return;
-            }
-            else if(id == 'qqq') {
-                alert('이미 존재하는 ID입니다');
-                $('#id').focus();
-                return;
-            }
-            register.send();
-        });
-    },
-    send: function() {
-        $('#register_form').attr({
-            'method':'post',
-            'action': this.url
-        });
-        $('#register_form').submit();
-    }
-
-
-};
-
 let addcust = {
     url:'',
     init: function(url) {
