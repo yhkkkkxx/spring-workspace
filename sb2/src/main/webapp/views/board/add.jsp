@@ -44,7 +44,7 @@
 
 </script>
 <div class="container">
-  <h2>Board Register Page</h2>
+  <h2>Add Board Page</h2>
   <form id="board_add">
     <div class="form-group">
       <label for="title">Title:</label>
@@ -59,6 +59,6 @@
                 name="boardContent" placeholder="Enter content"></textarea>
     </div>
     <input type="hidden" name="custId" value="${sessionScope.id}">
-    <button type="button" class="btn btn-primary">REGISTER</button>
+    <button type="button" class="btn btn-primary">ADD</button>
   </form>
 </div>

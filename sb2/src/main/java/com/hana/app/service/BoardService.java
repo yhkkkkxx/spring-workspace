@@ -1,5 +1,7 @@
 package com.hana.app.service;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.hana.app.data.dto.BoardDto;
 import com.hana.app.frame.HanaService;
 import com.hana.app.repository.BoardRepository;
@@ -43,5 +45,10 @@ public class BoardService implements HanaService<Integer, BoardDto> {
 
     public int cntUpdate(Integer id) throws Exception {
         return boardRepository.cntUpdate(id);
+    }
+
+    public Page<BoardDto> getPage(int pageNo) throws Exception {
+        PageHelper.startPage(pageNo, 4);
+        return boardRepository.getPage();
     }
 }

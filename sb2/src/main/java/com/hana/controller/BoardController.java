@@ -1,10 +1,13 @@
 package com.hana.controller;
 
+import com.github.pagehelper.PageInfo;
 import com.hana.app.data.dto.BoardDto;
 import com.hana.app.repository.BoardRepository;
 import com.hana.app.service.BoardService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +18,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/board")
 @RequiredArgsConstructor
+@Slf4j
 public class BoardController {
     String dir = "board/";
     final BoardService boardService;
@@ -42,17 +46,18 @@ public class BoardController {
         return "redirect:/board/get";
     }
     @RequestMapping("/detail")
-    public String detail(Model model, @RequestParam("id") int id, HttpSession httpSession) {
+    public String detail(Model model, @RequestParam("id") int id, HttpSession httpSession) throws Exception {
         BoardDto boardDto = null;
         try {
             boardDto = boardService.get(id);
+            //boardDto.getCommentList().stream().forEach(c->log.info(c.toString()));
             if(httpSession != null && !boardDto.getCustId().equals(httpSession.getAttribute("id"))) {
                 boardService.cntUpdate(id);
             }
             model.addAttribute("board", boardDto);
             model.addAttribute("center", dir+"detail");
         } catch (Exception e) {
-            model.addAttribute("center", dir+"registerfail");
+            throw e;
         }
 
         return "index";
@@ -76,5 +81,19 @@ public class BoardController {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @RequestMapping("/allpage")
+    public String allpage(@RequestParam(value = "pageNo", defaultValue = "1") int pageNo, Model model) {
+        PageInfo<BoardDto> p;
+        try {
+            p = new PageInfo<>(boardService.getPage(pageNo), 5);
+            model.addAttribute("cpage", p);
+            model.addAttribute("target", "/board");
+            model.addAttribute("center", dir+"allpage");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return "index";
     }
 }

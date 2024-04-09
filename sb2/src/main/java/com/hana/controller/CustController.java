@@ -1,5 +1,6 @@
 package com.hana.controller;
 
+import com.github.pagehelper.PageInfo;
 import com.hana.app.data.dto.CustDto;
 import com.hana.app.service.CustService;
 import lombok.RequiredArgsConstructor;
@@ -50,11 +51,25 @@ public class CustController {
         try {
             list = custService.get();
             model.addAttribute("custs", list);
+            model.addAttribute("target", "/cust");
             model.addAttribute("left", dir+"left");
             model.addAttribute("center", dir+"get");
 
         } catch (Exception e) {
             throw new RuntimeException(e);
+        }
+        return "index";
+    }
+    @RequestMapping("/allpage")
+    public String allpage(@RequestParam(value = "pageNo", defaultValue = "1") int pageNo, Model model) throws Exception {
+        PageInfo<CustDto> p;
+        try {
+            p = new PageInfo<>(custService.getPage(pageNo), 5); // 5:하단 네비게이션 개수
+            model.addAttribute("cpage",p);
+            model.addAttribute("left",dir+"left");
+            model.addAttribute("center",dir+"allpage");
+        } catch (Exception e) {
+            throw new Exception("시스템 장애: ER0001");
         }
         return "index";
     }

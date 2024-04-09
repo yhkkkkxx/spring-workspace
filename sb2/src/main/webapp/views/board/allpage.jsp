@@ -26,7 +26,7 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="b" items="${boards}">
+        <c:forEach var="b" items="${cpage.getList()}">
             <tr>
                 <td><a href="<c:url value="/board/detail"/>?id=${b.boardId}">${b.boardId}</a></td>
                 <td>${b.boardTitle}
@@ -44,4 +44,5 @@
         </c:forEach>
         </tbody>
     </table>
+    <jsp:include page="../page.jsp"/>
 </div>
