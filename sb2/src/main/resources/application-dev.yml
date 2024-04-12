@@ -15,8 +15,10 @@ spring:
     url: jdbc:log4jdbc:mysql://127.0.0.1:3306/shopdb?characterEncoding=utf8
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 #    url: jdbc:mysql://127.0.0.1:3306/shopdb?characterEncoding=utf8&serverTimezone=Asia/Seoul
-    username: user01
-    password: 111111
+#    user01/111111
+#    https://devglan.com/online-tools/jasypt-online-encryption-decryption
+    username: ENC(SgTue/kCMZIZFnZ1+ArzJw==)
+    password: ENC(nlIhjF2Y3M+X4VOfLUMk5A==)
 mybatis:
   type-aliases-package: com.hana.app.data.dto
   mapper-locations: classpath:/mapper/*.xml
@@ -33,4 +35,8 @@ app:
   dir:
     imgdir: file:/Users/hayoung/Documents/project/imgs/
     logdir: file:/Users/hayoung/Documents/project/logs/
-  wkey: zc1fFvuRYgybHd7Yii%2Bba9X14fURteyupYHB1toqylvjee1%2BKMCRVUvvuyQkDEVXAFD%2BDetR8yjmrss92C3siQ%3D%3D
+  key:
+    wkey: zc1fFvuRYgybHd7Yii%2Bba9X14fURteyupYHB1toqylvjee1%2BKMCRVUvvuyQkDEVXAFD%2BDetR8yjmrss92C3siQ%3D%3D
+    whkey: f7c391722c9ce95617c9ee6a905acd06
+  url:
+    serverurl: http://172.16.21.245:81

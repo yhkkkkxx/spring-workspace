@@ -28,6 +28,8 @@
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
     <style>
         .fakeimg {
             height: 200px;
@@ -67,6 +69,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<c:url value="/logout"/>">LOGOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<c:url value="/chat"/>">Chat</a>
             </li>
         </ul>
     </c:otherwise>

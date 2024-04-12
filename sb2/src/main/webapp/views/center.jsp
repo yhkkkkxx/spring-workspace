@@ -14,7 +14,6 @@
       $.ajax({
         url:'<c:url value="/wh"/>',
         success:(result) => {
-          alert(result);
           let text = result.response.body.items.item[0].wfSv;
           $('#wh').text(text);
         }

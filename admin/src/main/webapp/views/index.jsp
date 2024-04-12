@@ -43,6 +43,8 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
     <script>
         let index = {
             init:function() {
@@ -85,10 +87,19 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="<c:url value="/" />">
+            <a class="nav-link" href="<c:url value="#" />">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
+
+        <c:if test="${sessionScope.admin != null}">
+            <!-- Web Socket -->
+            <li class="nav-item active">
+                <a class="nav-link" href="<c:url value="/websocket" />">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Web Socket</span></a>
+            </li>
+        </c:if>
 
         <!-- Divider -->
         <hr class="sidebar-divider">

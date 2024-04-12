@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.tags.shaded.org.apache.xpath.operations.Mod;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -30,8 +31,12 @@ public class MainController {
     final CustService custService;
     final BoardService boardService;
 
-    @Value("${app.wkey}")
+    @Value("${app.key.wkey}")
     String wkey;
+    @Value("${app.key.whkey}")
+    String whkey;
+    @Value("${app.url.serverurl}")
+    String serverurl;
 
     @RequestMapping("/")
     public String main(Model model) {
@@ -111,6 +116,23 @@ public class MainController {
             result = "1";
         }
         return result;
+    }
+
+    @RequestMapping("/weather")
+    public String weather(Model model) throws IOException, ParseException {
+        model.addAttribute("center", "weather");
+        return "index";
+    }
+    @RequestMapping("/wh2")
+    @ResponseBody
+    public Object wh2(Model model) throws IOException, ParseException {
+        return WeatherUtil.getWeather2("1835848", whkey);
+    }
+    @RequestMapping("/chat")
+    public String chat(Model model) {
+        model.addAttribute("serverurl", serverurl);
+        model.addAttribute("center", "chat");
+        return "index";
     }
 
 }
