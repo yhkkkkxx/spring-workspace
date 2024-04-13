@@ -3,6 +3,7 @@ package com.hana.controller;
 import com.github.pagehelper.PageInfo;
 import com.hana.app.data.dto.CustDto;
 import com.hana.app.service.CustService;
+import com.hana.util.StringEnc;
 import lombok.RequiredArgsConstructor;
 import org.eclipse.tags.shaded.org.apache.xpath.operations.Mod;
 import org.springframework.stereotype.Controller;
@@ -50,6 +51,7 @@ public class CustController {
         List<CustDto> list = null;
         try {
             list = custService.get();
+            list.stream().forEach(c->{c.setName(StringEnc.decryptor(c.getName()));});
             model.addAttribute("custs", list);
             model.addAttribute("target", "/cust");
             model.addAttribute("left", dir+"left");

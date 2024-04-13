@@ -99,7 +99,14 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Web Socket</span></a>
             </li>
+            <!-- Web Socket -->
+            <li class="nav-item active">
+                <a class="nav-link" href="<c:url value="/notice" />">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Notice</span></a>
+            </li>
         </c:if>
+
 
         <!-- Divider -->
         <hr class="sidebar-divider">

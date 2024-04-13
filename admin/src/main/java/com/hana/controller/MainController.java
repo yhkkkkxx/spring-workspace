@@ -24,6 +24,7 @@ public class MainController {
     @RequestMapping("/")
     public String main(Model model){
         model.addAttribute("charurl", serverUrl);
+        model.addAttribute("serverurl", serverUrl);
         return "index";
     }
 
@@ -31,6 +32,13 @@ public class MainController {
     public String websocket(Model model){
         model.addAttribute("serverurl", serverUrl);
         model.addAttribute("center", "websocket");
+        return "index";
+    }
+
+    @RequestMapping("/notice")
+    public String notice(Model model){
+        model.addAttribute("serverurl", serverUrl);
+        model.addAttribute("center", "notice");
         return "index";
     }
 

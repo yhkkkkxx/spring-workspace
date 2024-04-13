@@ -35,6 +35,8 @@ app:
     uploadimgdir: /Users/hayoung/Documents/project/imgs/ # 파일 받아오기용
     logdir: file:/Users/hayoung/Documents/project/logs/
   url:
-    server-url: http://172.16.21.245:81
+#    server-url: http://172.16.21.135:81
+#    server-url: http://172.16.21.245:81
 #    server-url: http://127.0.0.1:81
 #    server-url: http://172.16.21.91:81
+    server-url: 192.168.35.28:81

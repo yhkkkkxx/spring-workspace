@@ -6,6 +6,7 @@ import com.hana.app.data.dto.CustDto;
 import com.hana.app.service.AddrService;
 import com.hana.app.service.BoardService;
 import com.hana.app.service.CustService;
+import com.hana.util.StringEnc;
 import com.hana.util.WeatherUtil;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -14,6 +15,7 @@ import org.eclipse.tags.shaded.org.apache.xpath.operations.Mod;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +32,7 @@ import java.util.Random;
 public class MainController {
     final CustService custService;
     final BoardService boardService;
+    final BCryptPasswordEncoder encoder;
 
     @Value("${app.key.wkey}")
     String wkey;
@@ -37,6 +40,7 @@ public class MainController {
     String whkey;
     @Value("${app.url.serverurl}")
     String serverurl;
+
 
     @RequestMapping("/")
     public String main(Model model) {
@@ -48,6 +52,7 @@ public class MainController {
         }catch (Exception e){
             model.addAttribute("ranks",null);
         }
+        model.addAttribute("serverurl", serverurl);
         model.addAttribute("ranks",list);
         return "index";
     }
@@ -79,7 +84,7 @@ public class MainController {
             if(custDto == null) {
                 throw new Exception();
             }
-            if(!custDto.getPwd().equals(pwd)) {
+            if(!encoder.matches(pwd, custDto.getPwd())) {
                 throw new Exception();
             }
             httpSession.setAttribute("id", id);
@@ -98,6 +103,8 @@ public class MainController {
     @RequestMapping("/registerimpl")
     public String registerimpl(Model model, CustDto custDto, HttpSession httpSession) {
         try {
+            custDto.setPwd(encoder.encode(custDto.getPwd()));
+            custDto.setName(StringEnc.encryptor(custDto.getName()));
             custService.add(custDto);
             httpSession.setAttribute("id", custDto.getId());
         } catch (Exception e) {
@@ -106,7 +113,6 @@ public class MainController {
         }
         return "index";
     }
-
     @ResponseBody
     @RequestMapping("/registercheckid")
     public Object registercheckid(@RequestParam("id") String id) throws Exception {
@@ -134,5 +140,4 @@ public class MainController {
         model.addAttribute("center", "chat");
         return "index";
     }
-
 }

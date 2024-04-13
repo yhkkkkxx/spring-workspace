@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,8 +29,10 @@
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <script src="https://code.highcharts.com/highcharts-3d.js"></script>
-    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
-    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+
+<%--    web socket--%>
+    <script src="<c:url value="/webjars/sockjs-client/sockjs.min.js"/>"></script>
+    <script src="<c:url value="/webjars/stomp-websocket/stomp.min.js"/>"></script>
     <style>
         .fakeimg {
             height: 200px;
@@ -38,7 +41,44 @@
         #con {
             margin-bottom: 50px;
         }
+        #notice {
+            margin: 10px;
+        }
+        #noticetext {
+            color: red;
+        }
     </style>
+    <script>
+        let notice = {
+            init: function () {
+                notice.connect();
+                console.log("complete connect");
+            },
+            connect:function(){
+                <%--console.log(${serverurl});--%>
+                let socket = new SockJS('${serverurl}/nws');
+                this.stompClient = Stomp.over(socket);
+
+                this.stompClient.connect({}, function(frame) {
+                    console.log('Connected: ' + frame);
+                    this.subscribe('/send/notice', function(msg) {
+                        console.log("notice")
+
+                        $("#noticetext").text("ㅤ"+JSON.parse(msg.body).content1.toString());
+                    });
+                });
+            },
+            // disconnect:function(){
+            //     if (this.stompClient !== null) {
+            //         this.stompClient.disconnect();
+            //     }
+            //     console.log("Disconnected");
+            // }
+        };
+        $(function () {
+            notice.init();
+        });
+    </script>
 </head>
 <body>
 
@@ -46,6 +86,7 @@
     <h1><spring:message code="site.title" arguments="aa,aa"/></h1>
     <h5><spring:message code="site.phone" arguments="aa,aa"/></h5>
 </div>
+
 
 <c:choose>
     <c:when test="${id == null}">
@@ -120,6 +161,12 @@
         </ul>
     </div>
 </nav>
+
+<div id="notice">
+    <label> 🔔 공지사항</label>
+    <label id="noticetext"></label>
+</div>
+
 <%--End Nav Bar--%>
 
 <%--Center Area--%>
