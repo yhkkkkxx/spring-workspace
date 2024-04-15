@@ -14,12 +14,15 @@ public class StomWebSocketConfig implements WebSocketMessageBrokerConfigurer{
     public void registerStompEndpoints(StompEndpointRegistry registry) {
 //        registry.addEndpoint("/ws").setAllowedOrigins("http://127.0.0.1").withSockJS();
 //        registry.addEndpoint("/ws").setAllowedOrigins("http://172.16.21.91").withSockJS();
-        registry.addEndpoint("/ws").setAllowedOriginPatterns("*").withSockJS();
-        registry.addEndpoint("/wss").setAllowedOrigins("http://172.16.21.245:81").withSockJS();
-        registry.addEndpoint("/nws").setAllowedOrigins("http://172.16.21.245:81").withSockJS();
-        registry.addEndpoint("/nws").setAllowedOrigins("http://127.0.0.1::81").withSockJS();
-        registry.addEndpoint("/nws").setAllowedOrigins("http://192.168.35.28:81").withSockJS();
-        registry.addEndpoint("/nws").setAllowedOrigins("http://192.168.35.28").withSockJS();
+//        registry.addEndpoint("/ws").setAllowedOriginPatterns("*").withSockJS();
+        registry.addEndpoint("/ws").setAllowedOrigins("http://172.16.21.245:81", "http://172.16.21.245").withSockJS();
+        registry.addEndpoint("/wss").setAllowedOrigins("http://172.16.21.245:81", "http://172.16.21.245").withSockJS();
+//        registry.addEndpoint("/nws").setAllowedOrigins("http://172.16.21.245:81").withSockJS();
+//        registry.addEndpoint("/nws").setAllowedOrigins("http://172.16.21.245").withSockJS();
+//        registry.addEndpoint("/nws").setAllowedOrigins("http://127.0.0.1:81").withSockJS();
+//        registry.addEndpoint("/nws").setAllowedOrigins("http://172.16.21.245:81","http://172.16.21.245").withSockJS();
+        registry.addEndpoint("/nws").setAllowedOriginPatterns("*").withSockJS();
+//        registry.addEndpoint("/nws").setAllowedOrigins("http://192.168.35.28").withSockJS();
 
 //        registry.addEndpoint("/chbot").setAllowedOrigins("http://127.0.0.1").withSockJS();
 //        registry.addEndpoint("/wss").setAllowedOrigins("http://127.0.0.1").withSockJS();

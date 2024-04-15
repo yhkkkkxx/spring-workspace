@@ -50,13 +50,15 @@
     </style>
     <script>
         let notice = {
+            stompClient:null,
             init: function () {
                 notice.connect();
-                console.log("complete connect");
             },
             connect:function(){
-                <%--console.log(${serverurl});--%>
-                let socket = new SockJS('${serverurl}/nws');
+                console.log("complete connect");
+
+                <%--let socket = new SockJS("<c:out value='${serverurl}'/>"+"/nws");--%>
+                let socket = new SockJS("${serverurl}/nws");
                 this.stompClient = Stomp.over(socket);
 
                 this.stompClient.connect({}, function(frame) {
@@ -67,7 +69,7 @@
                         $("#noticetext").text("ㅤ"+JSON.parse(msg.body).content1.toString());
                     });
                 });
-            },
+            }
             // disconnect:function(){
             //     if (this.stompClient !== null) {
             //         this.stompClient.disconnect();
@@ -76,7 +78,7 @@
             // }
         };
         $(function () {
-            notice.init();
+             notice.init();
         });
     </script>
 </head>
@@ -109,7 +111,7 @@
                 <a class="nav-link" href="<c:url value="/mypage/"/>">${id}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<c:url value="/logout"/>">LOGOUT</a>
+                <a class="nav-link" href="<c:url value="/logoutimpl"/>">LOGOUT</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<c:url value="/chat"/>">Chat</a>

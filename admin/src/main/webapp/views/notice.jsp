@@ -34,8 +34,10 @@
 
             this.stompClient.connect({}, function(frame) {
                 console.log('Connected: ' + frame);
+                console.log('hi');
                 this.subscribe('/send/notice', function(msg) {
-                    console.log("notice")
+                    console.log('hioiiiiii');
+                    console.log("\""+JSON.parse(msg.body).content1.toString()+"\" 전달 완료✔️");
                     $("#complete").text("\""+JSON.parse(msg.body).content1.toString()+"\" 전달 완료✔️");
                 });
             });

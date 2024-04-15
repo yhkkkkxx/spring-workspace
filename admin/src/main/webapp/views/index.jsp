@@ -130,6 +130,7 @@
                         <h6 class="collapse-header">Customer Management:</h6>
                         <a class="collapse-item" href="<c:url value="/cust/add"/>">Add</a>
                         <a class="collapse-item" href="<c:url value="/cust/get"/>">Get</a>
+                        <a class="collapse-item" href="<c:url value="/cust/info"/>">Info</a>
                     </div>
                 </div>
             </li>
@@ -151,7 +152,9 @@
                 </div>
             </li>
 
+
         </c:if>
+
         <!-- Divider -->
         <hr class="sidebar-divider">
 
@@ -355,7 +358,7 @@
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">${sessionScope.admin.role.roleName}</span>
                             </li>
                             <li class="nav-item dropdown no-arrow">
-                                <a href="<c:url value="/logout"/>" role="button"
+                                <a href="<c:url value="/logoutimpl"/>" role="button"
                                    aria-haspopup="true" aria-expanded="false">LOGOUT</a>
                             </li>
 

@@ -1,6 +1,8 @@
 package com.hana.controller;
 
 import com.hana.app.data.dto.CustDto;
+import com.hana.app.data.entity.LoginCust;
+import com.hana.app.repository.LoginCustRepository;
 import com.hana.app.service.CustService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -17,6 +19,7 @@ import java.util.List;
 public class CustController {
     String dir = "cust/";
     final CustService custService;
+    final LoginCustRepository loginCustRepository;
 
     @RequestMapping("/")
     public String main(Model model) {
@@ -90,6 +93,25 @@ public class CustController {
         } catch (Exception e) {
             throw new Exception("ER0001");
         }
+    }
+
+
+    @RequestMapping("/info")
+    public String login(Model model) {
+
+        long cnt = loginCustRepository.count();
+        List<LoginCust> loginlist = new ArrayList<>();
+        Iterable<LoginCust> list = loginCustRepository.findAll();
+
+        list.forEach(loginCust -> {
+            if(loginCust != null){
+                loginlist.add(loginCust);
+            }
+        });
+        model.addAttribute("cnt", loginlist.size());
+        model.addAttribute("loginlist", loginlist);
+        model.addAttribute("center", dir+"info");
+        return "index";
     }
 
 }
