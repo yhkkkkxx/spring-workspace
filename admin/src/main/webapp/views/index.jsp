@@ -105,6 +105,12 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Notice</span></a>
             </li>
+            <!-- Web Socket -->
+            <li class="nav-item active">
+                <a class="nav-link" href="<c:url value="/chat" />">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Chat</span></a>
+            </li>
         </c:if>
 
 

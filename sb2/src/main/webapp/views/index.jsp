@@ -47,8 +47,68 @@
         #noticetext {
             color: red;
         }
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
+        #scroll-btn {
+            opacity: 0;
+            width: 50px;
+            height: 50px;
+            color: #fff;
+            background-color: #316cf4;
+            position: fixed;
+            bottom: 13%;
+            right: 5%;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            font: 2px monospace;
+            transition: opacity 2s, transform 2s;
+        }
+        #scroll-btn.show {
+            opacity: 1;
+            transition: opacity 5s, transform 5s;
+        }
+        #scroll-btn2 {
+            opacity: 0;
+            width: 50px;
+            height: 50px;
+            color: #fff;
+            background-color: #316cf4;
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            font: bold 10px monospace;
+            transition: opacity 2s, transform 2s;
+        }
+        #scroll-btn2.show {
+            opacity: 1;
+            transition: opacity 5s, transform 5s;
+        }
     </style>
     <script>
+        let chatbtn = {
+            init:function(){
+                // const scrollBtn = document.createElement("button");
+                // scrollBtn.innerHTML = "chatbot";
+                // scrollBtn.setAttribute("id", "scroll-btn");
+                // document.body.appendChild(scrollBtn);
+                // scrollBtn.classList.add("show");
+                // scrollBtn.addEventListener("click", function(){
+                //     location.href='/login';
+                // });
+                const scrollBtn2 = document.createElement("button");
+                scrollBtn2.innerHTML = "1:1";
+                scrollBtn2.setAttribute("id", "scroll-btn2");
+                document.body.appendChild(scrollBtn2);
+                scrollBtn2.classList.add("show");
+                scrollBtn2.addEventListener("click", function(){
+                    location.href='<c:url value="/chat2"/>';
+                });
+            }
+        };
         let notice = {
             stompClient:null,
             init: function () {
@@ -79,6 +139,7 @@
         };
         $(function () {
              notice.init();
+            chatbtn.init();
         });
     </script>
 </head>

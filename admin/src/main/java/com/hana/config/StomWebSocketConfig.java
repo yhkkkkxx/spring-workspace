@@ -22,6 +22,7 @@ public class StomWebSocketConfig implements WebSocketMessageBrokerConfigurer{
 //        registry.addEndpoint("/nws").setAllowedOrigins("http://127.0.0.1:81").withSockJS();
 //        registry.addEndpoint("/nws").setAllowedOrigins("http://172.16.21.245:81","http://172.16.21.245").withSockJS();
         registry.addEndpoint("/nws").setAllowedOriginPatterns("*").withSockJS();
+        registry.addEndpoint("/chat").setAllowedOriginPatterns("*").withSockJS();
 //        registry.addEndpoint("/nws").setAllowedOrigins("http://192.168.35.28").withSockJS();
 
 //        registry.addEndpoint("/chbot").setAllowedOrigins("http://127.0.0.1").withSockJS();
@@ -31,6 +32,6 @@ public class StomWebSocketConfig implements WebSocketMessageBrokerConfigurer{
     /* 어플리케이션 내부에서 사용할 path를 지정할 수 있음 */
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
-        registry.enableSimpleBroker("/send","/send2");
+        registry.enableSimpleBroker("/send","/send2","/send3");
     }
 }

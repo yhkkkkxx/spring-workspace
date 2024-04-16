@@ -50,6 +50,8 @@ app:
   key:
     wkey: zc1fFvuRYgybHd7Yii%2Bba9X14fURteyupYHB1toqylvjee1%2BKMCRVUvvuyQkDEVXAFD%2BDetR8yjmrss92C3siQ%3D%3D
     whkey: f7c391722c9ce95617c9ee6a905acd06
+    ncp-id: nmfbdo5jys
+    ncp-secret: C4qa83u34aMKeZbVsNt3mmdZxcfJGYeT0b2uO99U
   url:
     serverurl: http://172.16.21.245:81
 #     server-url: 192.168.35.28:81

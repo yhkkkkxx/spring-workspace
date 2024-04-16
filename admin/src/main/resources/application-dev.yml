@@ -45,3 +45,6 @@ app:
 #    server-url: http://127.0.0.1:81
 #    server-url: http://172.16.21.91:81
 #    server-url: 192.168.35.28:81
+  key:
+    ncp-id: nmfbdo5jys
+    ncp-secret: C4qa83u34aMKeZbVsNt3mmdZxcfJGYeT0b2uO99U

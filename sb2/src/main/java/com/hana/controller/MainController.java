@@ -9,6 +9,7 @@ import com.hana.app.service.AddrService;
 import com.hana.app.service.BoardService;
 import com.hana.app.service.CustService;
 import com.hana.util.FileUploadUtil;
+import com.hana.util.NcpUtil;
 import com.hana.util.StringEnc;
 import com.hana.util.WeatherUtil;
 import jakarta.servlet.http.HttpSession;
@@ -48,6 +49,10 @@ public class MainController {
     String serverurl;
     @Value("${app.dir.uploadimgdir}")
     String uploadImgDir;
+    @Value("${app.key.ncp-id}")
+    String ncpId;
+    @Value("${app.key.ncp-secret}")
+    String ncpSecret;
 
     @RequestMapping("/")
     public String main(Model model) {
@@ -160,11 +165,28 @@ public class MainController {
         model.addAttribute("center", "chat");
         return "index";
     }
+    @RequestMapping("/chat2")
+    public String chat2(Model model) {
+        model.addAttribute("serverurl", serverurl);
+        model.addAttribute("center", "chat2");
+        return "index";
+    }
     @RequestMapping("/saveimg")
     @ResponseBody
     public String saveimg(@RequestParam("file") MultipartFile file) throws IOException {
         String imgname = file.getOriginalFilename();
         FileUploadUtil.saveFile(file, uploadImgDir);
         return imgname;
+    }
+    @RequestMapping("/summary")
+    public String summary(Model model) {
+        model.addAttribute("center", "summary");
+        return "index";
+    }
+    @RequestMapping("/summaryimpl")
+    @ResponseBody
+    public Object summaryimpl(@RequestParam("content") String content) {
+        JSONObject result = (JSONObject) NcpUtil.getSummary(ncpId, ncpSecret, content);
+        return result;
     }
 }

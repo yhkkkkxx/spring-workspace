@@ -35,6 +35,13 @@ public class MainController {
         return "index";
     }
 
+    @RequestMapping("/chat")
+    public String chat(Model model){
+        model.addAttribute("serverurl", serverUrl);
+        model.addAttribute("center", "chat");
+        return "index";
+    }
+
     @RequestMapping("/notice")
     public String notice(Model model){
         model.addAttribute("serverurl", serverUrl);
