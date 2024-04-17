@@ -3,15 +3,13 @@ package com.hana.controller;
 import com.hana.app.data.dto.AddrDto;
 import com.hana.app.data.dto.BoardDto;
 import com.hana.app.data.dto.CustDto;
+import com.hana.app.data.dto.OcrDto;
 import com.hana.app.data.entity.LoginCust;
 import com.hana.app.repository.LoginCustRepository;
 import com.hana.app.service.AddrService;
 import com.hana.app.service.BoardService;
 import com.hana.app.service.CustService;
-import com.hana.util.FileUploadUtil;
-import com.hana.util.NcpUtil;
-import com.hana.util.StringEnc;
-import com.hana.util.WeatherUtil;
+import com.hana.util.*;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -29,6 +27,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Random;
 
@@ -47,6 +46,8 @@ public class MainController {
     String whkey;
     @Value("${app.url.serverurl}")
     String serverurl;
+    @Value("${app.url.chatboturl}")
+    String chatboturl;
     @Value("${app.dir.uploadimgdir}")
     String uploadImgDir;
     @Value("${app.key.ncp-id}")
@@ -188,5 +189,43 @@ public class MainController {
     public Object summaryimpl(@RequestParam("content") String content) {
         JSONObject result = (JSONObject) NcpUtil.getSummary(ncpId, ncpSecret, content);
         return result;
+    }
+    @RequestMapping("/ocr")
+    public String ocr(Model model) {
+        model.addAttribute("center", "ocr");
+        return "index";
+    }
+    @RequestMapping("/ocrimpl")
+    public String ocrimpl(Model model, OcrDto ocrDto) throws IOException {
+        String imgname = ocrDto.getImage().getOriginalFilename();
+        FileUploadUtil.saveFile(ocrDto.getImage(), uploadImgDir);
+        JSONObject jsonObject = OCRUtil.getResult(uploadImgDir, imgname);
+        Map<String, String> map = OCRUtil.getData(jsonObject);
+        model.addAttribute("result", map);
+        model.addAttribute("imgname", imgname);
+        model.addAttribute("center", "ocr");
+        return "index";
+    }
+    @RequestMapping("/ocr2")
+    public String ocr2(Model model) {
+        model.addAttribute("center", "ocr2");
+        return "index";
+    }
+    @RequestMapping("/ocr2impl")
+    public String ocr2impl(Model model, OcrDto ocrDto) throws IOException {
+        String imgname = ocrDto.getImage().getOriginalFilename();
+        FileUploadUtil.saveFile(ocrDto.getImage(), uploadImgDir);
+        JSONObject jsonObject = OCRUtil.getResult(uploadImgDir, imgname);
+        Map<String, String> map = OCRUtil.getCardData(jsonObject);
+        model.addAttribute("result", map);
+        model.addAttribute("imgname", imgname);
+        model.addAttribute("center", "ocr2");
+        return "index";
+    }
+    @RequestMapping("/chatbot")
+    public String chatbot(Model model) {
+        model.addAttribute("chatboturl", chatboturl);
+        model.addAttribute("center", "chatbot");
+        return "index";
     }
 }

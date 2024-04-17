@@ -1,6 +1,7 @@
 package com.hana.util;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -12,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+@Slf4j
 public class OCRUtil {
     public static JSONObject getResult(String imgpath, String imgname){
         JSONObject obj = null;
@@ -109,9 +111,41 @@ public class OCRUtil {
         out.flush();
     }
 
+    public static Map getCardData(JSONObject obj){
+        Map<String,String> map = new HashMap<>();
+        JSONArray images = (JSONArray) obj.get("images");
+        JSONObject jo1 = (JSONObject) images.get(0);
+        JSONArray fields = (JSONArray) jo1.get("fields");
+        log.info(fields.toJSONString());
+
+//        JSONObject biznum_obj = (JSONObject) fields.get(0);
+//        String biznum = (String)biznum_obj.get("inferText");
+
+//        JSONObject card_obj = (JSONObject) fields.get(0);
+//        String card = (String)card_obj.get("inferText");
+
+        JSONObject cardnum_obj = (JSONObject) fields.get(0);
+        String cardnum = (String)cardnum_obj.get("inferText");
+
+        JSONObject validthru_obj = (JSONObject) fields.get(1);
+        String validthru = (String)validthru_obj.get("inferText");
+
+        JSONObject name_obj = (JSONObject) fields.get(2);
+        String name = (String)name_obj.get("inferText");
+
+//        map.put("biznum", biznum);
+//        map.put("card", card);
+        map.put("cardnum", cardnum);
+        map.put("validthru", validthru);
+        map.put("name", name);
+
+        return map;
+    }
+
     public static Map getData(JSONObject obj){
         Map<String,String> map = new HashMap<>();
         JSONArray images = (JSONArray) obj.get("images");
+        log.info("--------------------------"+images.toString());
         JSONObject jo1 = (JSONObject) images.get(0);
         JSONArray fields = (JSONArray) jo1.get("fields");
 

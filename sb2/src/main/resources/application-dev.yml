@@ -45,13 +45,16 @@ logging:
 app:
   dir:
     imgdir: file:/Users/hayoung/Documents/project/imgs/
-    uploadimgdir: /Users/hayoung/Documents/project/imgs/ # 파일 받아오기용
+    uploadimgdir: /Users/hayoung/Documents/project/imgs/
     logdir: file:/Users/hayoung/Documents/project/logs/
   key:
-    wkey: zc1fFvuRYgybHd7Yii%2Bba9X14fURteyupYHB1toqylvjee1%2BKMCRVUvvuyQkDEVXAFD%2BDetR8yjmrss92C3siQ%3D%3D
-    whkey: f7c391722c9ce95617c9ee6a905acd06
-    ncp-id: nmfbdo5jys
-    ncp-secret: C4qa83u34aMKeZbVsNt3mmdZxcfJGYeT0b2uO99U
+    wkey: ENC(ViuOF8TxGl0fkz8SFyTjguy0NAjshTNH9xjMx8Yg66o277yXmZaMaa23g6vRNEJEn6y/S35kitqEByM4slIHq39rhFbPfKZzthPbPNh3HYXzMVn/Mj2rCMBFfn4i3C1BwPYnk66csqj0VaQKQ+ea8w==)
+    whkey: ENC(Ny6RwjzZu8NoWJ8kZJgaPG2EL9BzE/iC2bkVKtr0QYJwYD/Gg2wZqnXsi2U+zpxd)
+    ncp-id: ENC(K99C+/C1voMBM1M70JnacST5Z7TmLgQ4)
+    ncp-secret: ENC(F5NvrYK1fmqNbE2PAlsEViLzKwjkkXWUt+Tow0WkfpGUstTFQSfTRAm220Byhrdmvo1j33pVAMo=)
+    chatbot-url: ENC(aMlJpx2r55v/2awp3j9/U304Q6oPmAHtOG9GDL7Avsav44R1YMuDT/ezjF/s1c55lEVnFCZ0Wz2Q4zWI8/uTFjQYyiKyVoFSMyTD/wCftC93/cflsXgjp6g2FW5DcT2bPXtHDj9fFEVNiF/eMOVkb9ZKLifYubYipKiUec7FRFA=)
+    chatbot-key: ENC(EvQnSS+y5Ke1oi5C4vPxtqqFix+0YPmHpJU+OUZzyYJgmLK5pNfgBzXm8rEvb8kjt3Vchfrqpm8=)
   url:
     serverurl: http://172.16.21.245:81
+    chatboturl: http://172.16.21.245
 #     server-url: 192.168.35.28:81

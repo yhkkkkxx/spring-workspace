@@ -30,6 +30,7 @@
     stompClient:null,
     init:function(){
       this.id = $('#adm_id').text();
+      this.connect();
       $('#connect').click(()=>{
         this.connect();
       });
@@ -42,18 +43,18 @@
           'receiveid' : $('#target').val(),
           'content1' : $('#totext').val()
         });
-        this.stompClient.send('/sendchat', {}, msg);
+        this.stompClient.send('/sendchatbot', {}, msg);
       });
     },
     connect:function(){
       let sid = this.id;
-      let socket = new SockJS('${serverurl}/chat2');
+      let socket = new SockJS('${chatboturl}/chatbot');
       this.stompClient = Stomp.over(socket);
 
       this.stompClient.connect({}, function(frame) {
         websocket.setConnected(true);
         console.log('Connected: ' + frame);
-        this.subscribe('/send3/to/'+sid, function(msg) {
+        this.subscribe('/send/me/'+sid, function(msg) {
           $("#to").prepend(
                   "<h4>" + JSON.parse(msg.body).sendid +":"+
                   JSON.parse(msg.body).content1
@@ -83,16 +84,15 @@
 
 
 <div class="container">
-  <h2>1:1 Chat</h2>
+  <h2>ChatBot</h2>
 
   <div class="col-sm-5">
-    <h1 id="adm_id">${sessionScope.admin.id}</h1>
+    <h1 id="adm_id">${sessionScope.id}</h1>
     <H1 id="status">Status</H1>
     <button id="connect">Connect</button>
     <button id="disconnect">Disconnect</button>
 
-    <h3>To</h3>
-    <input type="text" id="target" value="oadmin" readonly>
+    <h3>ask to bot</h3>
     <input type="text" id="totext"><button id="sendto">Send</button>
     <div id="to"></div>
 
