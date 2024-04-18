@@ -54,6 +54,7 @@ app:
     ncp-secret: ENC(F5NvrYK1fmqNbE2PAlsEViLzKwjkkXWUt+Tow0WkfpGUstTFQSfTRAm220Byhrdmvo1j33pVAMo=)
     chatbot-url: ENC(aMlJpx2r55v/2awp3j9/U304Q6oPmAHtOG9GDL7Avsav44R1YMuDT/ezjF/s1c55lEVnFCZ0Wz2Q4zWI8/uTFjQYyiKyVoFSMyTD/wCftC93/cflsXgjp6g2FW5DcT2bPXtHDj9fFEVNiF/eMOVkb9ZKLifYubYipKiUec7FRFA=)
     chatbot-key: ENC(EvQnSS+y5Ke1oi5C4vPxtqqFix+0YPmHpJU+OUZzyYJgmLK5pNfgBzXm8rEvb8kjt3Vchfrqpm8=)
+    kakao-rest-key: ENC(RC49lsMiVcSIyqBlArjy2gsKmpsr9YkVGqApNJs6ZOMhGy7WxBgXTtWK+NuWrqDw)
   url:
     serverurl: http://172.16.21.245:81
     chatboturl: http://172.16.21.245

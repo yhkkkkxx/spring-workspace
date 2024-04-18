@@ -56,9 +56,10 @@
         console.log('Connected: ' + frame);
         this.subscribe('/send/me/'+sid, function(msg) {
           $("#to").prepend(
-                  "<h4>" + JSON.parse(msg.body).sendid +":"+
+                  "<h6>" + JSON.parse(msg.body).sendid +":"+
                   JSON.parse(msg.body).content1
-                  + "</h4>");
+                  + "</h6>");
+          $('#totext').val("");
         });
       });
     },

@@ -1,18 +1,24 @@
 package com.hana.kakao;
 
 import lombok.extern.slf4j.Slf4j;
-import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.*;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
 
 @SpringBootTest
 @Slf4j
 class KakaoTests1 {
+
+    @Value("${app.key.kakao-rest-key}")
+    String key;
 
     @Test
     void contextLoads() throws Exception {
@@ -24,7 +30,7 @@ class KakaoTests1 {
                 + "&y=" + "126.9433486"
                 + "&radius=" + "1000";
 
-        String apiKey = "6bdb08e0e25793368dd03771a5e18de1";	//발급받은 restapi key
+        String apiKey = key;	//발급받은 restapi key
 
 
 
